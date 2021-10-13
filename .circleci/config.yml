@@ -6,9 +6,7 @@ orbs:
 
 jobs:
   newman-collection-run:
-    docker:
-      # replace with your preferred image
-      - image: cimg/base:stable
+    executor: newman/postman-newman-docker
     steps:
       - checkout
       - newman/newman-run:
